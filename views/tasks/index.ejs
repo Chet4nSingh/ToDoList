@@ -1,0 +1,19 @@
+
+<%- layout('/layouts/boilerplate') %>
+
+    <div class="container">
+        <h1>All Tasks</h1>
+        <ul class="list-group list-group-flush">
+            <% for (let task of tasks) { %>
+                <li class="list-group-item list-group-item-primary bg-dark"><a href="/index/<%= task._id %>"
+                        class="link-info link-emphasis">
+                        <%= task.name %>
+                    </a></li>
+                <% } %>
+        </ul>
+        <div>
+            <a href="/index/new" class="text-light">Add new task</a>
+        </div>
+    </div>
+  
+

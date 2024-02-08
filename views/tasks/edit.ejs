@@ -1,0 +1,23 @@
+<%- layout('/layouts/boilerplate') %>
+
+    <div class="container">
+        <h1>Edit Task</h1>
+        <form action="/index/<%= task._id %>?_method=PUT" method="POST">
+            <div>
+                <label for="name">Task Name </label>
+                <input type="text" id="name" name="name" value="<%= task.name %>">
+            </div>
+            <div>
+                <label for="startDay">Start Day </label>
+                <input type="text" id="startDay" name="startDay" value="<%= task.startDay %>">
+            </div>
+            <div>
+                <label for="endDay">End Day </label>
+                <input type="text" id="endDay" name="endDay" value="<%= task.endDay %>">
+            </div>
+            <button>Update Task</button>
+        </form>
+        <a href="/index/<%= task._id %>" class="text-light">Back to Task</a>
+        <br>
+        <a href="/index" class="text-light">All Tasks</a>
+    </div>

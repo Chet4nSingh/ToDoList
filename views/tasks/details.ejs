@@ -1,0 +1,16 @@
+<%- layout('/layouts/boilerplate') %>
+    <div class="container">
+        <h1>
+            <%= task.name %>
+        </h1>
+        <h2>Start Day: <%= task.startDay %>
+        </h2>
+        <h2>End Day: <%= task.endDay %>
+        </h2>
+        <a href="/index/<%= task._id %>/edit" class="text-light">Edit Task</a>
+        <br>
+        <a href="/index" class="text-light">All Tasks</a>
+        <form action="/index/<%= task._id %>?_method=DELETE" method="POST">
+            <button>Delete Task</button>
+        </form>
+    </div>
